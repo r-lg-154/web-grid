@@ -3,7 +3,43 @@ document.addEventListener("DOMContentLoaded", () => {
   initialCleanup();
 
   // Hey! Pssst! In here ...
-});
+  document.getElementById("btn-add-line").addEventListener("click", 
+                ()=>{
+                  console.log("clique ici !");
+                  for (let i=0; i<10; i++)
+                  {
+                    my_div = document.createElement('div')
+                    grid.appendChild(my_div);
+                  }
+                  
+                })
+  document.getElementById("grid").addEventListener("click", 
+                ()=>{
+                  for (square of grid.children)
+                  {
+                    square.addEventListener("click",
+                    (event)=>{
+                        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                        event.target.style.backgroundColor = "#" + randomColor;
+                        event.target.classList.add("click") 
+                    })
+                  }
+                })
+
+  document.getElementById("grid").addEventListener("mouseover",
+                ()=>{
+                  for (square of grid.children)
+                  {
+                    square.addEventListener("mouseover", 
+                    (event)=>{
+                      if (!event.target.classList.contains("click"))
+                      
+                      event.target.style.backgroundColor = "blue"})
+                    
+                  }
+                })
+
+              })
 
 /**
  * Cleans up the document so that the exercise is easier.
@@ -22,3 +58,6 @@ function initialCleanup() {
     node.remove();
   }
 }
+
+
+
