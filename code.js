@@ -33,12 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     square.addEventListener("mouseover", 
                     (event)=>{
                       if (!event.target.classList.contains("click"))
-                      
                       event.target.style.backgroundColor = "blue"})
-                    
+                      
                   }
                 })
-
               })
 
 /**
